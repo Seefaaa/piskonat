@@ -59,3 +59,12 @@
 		user.updatehealth()
 		user.adjustOrganLoss(ORGAN_SLOT_BRAIN, -hp_gained) // Zom Bee gibbers "BRAAAAISNSs!1!"
 		user.set_nutrition(min(user.nutrition + hp_gained, NUTRITION_LEVEL_FULL))
+
+/obj/item/mutant_hand/zombie/noninfectious/afterattack(atom/target, mob/user, proximity_flag)
+	. = ..()
+	if(!proximity_flag)
+		return
+	else if(isliving(target))
+		if(!ishuman(target))
+			. |= AFTERATTACK_PROCESSED_ITEM
+			check_feast(target, user)

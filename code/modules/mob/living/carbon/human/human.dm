@@ -1042,6 +1042,19 @@
 /mob/living/carbon/human/species/zombie/infectious
 	race = /datum/species/zombie/infectious
 
+/mob/living/carbon/human/species/zombie/event
+	race = /datum/species/zombie/infectious
+	faction = list(FACTION_HOSTILE)
+	ai_controller = /datum/ai_controller/zombie
+	combat_mode = TRUE
+
+/mob/living/carbon/human/species/zombie/event/Initialize(mapload)
+	. = ..()
+	var/mutant_hands = GetComponent(/datum/component/mutant_hands)
+	if(mutant_hands)
+		qdel(mutant_hands)
+	AddComponent(/datum/component/mutant_hands, mutant_hand_path = /obj/item/mutant_hand/zombie/noninfectious)
+
 /mob/living/carbon/human/species/synthetic
 	race = /datum/species/synthetic
 	gib_type = /obj/effect/decal/cleanable/robot_debris
