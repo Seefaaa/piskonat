@@ -131,7 +131,7 @@
 			for(var/key in GLOB.admin_visible_traits)
 				if(istype(D,key))
 					available_traits += GLOB.admin_visible_traits[key]
-			// PSYCHONAUT EDIT ADDITION START - PSYCHONAUT TRAITS
+			// PSYCHONAUT EDIT ADDITION START - TRAITS
 			for(var/key in GLOB.psychonaut_visible_traits)
 				if(istype(D,key))
 					available_traits += GLOB.psychonaut_visible_traits[key]
