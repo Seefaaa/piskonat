@@ -7,6 +7,7 @@
 #define MUTE_ADMINHELP (1<<3)
 #define MUTE_DEADCHAT (1<<4)
 #define MUTE_INTERNET_REQUEST (1<<5)
+#define MUTE_LOOC (1<<6) // PSYCHONAUT EDIT ADDITION - LOOC
 #define MUTE_ALL ALL
 
 //Some constants for DB_Ban
@@ -174,4 +175,3 @@ GLOBAL_VAR_INIT(ghost_role_flags, ALL)
 /// Used in logging uses of admin verbs (and sometimes some non-admin or debug verbs) to the blackbox
 /// Only pass it a string key, the verb being used.
 #define BLACKBOX_LOG_ADMIN_VERB(the_verb) SSblackbox.record_feedback("tally", "admin_verb", 1, the_verb)
-
