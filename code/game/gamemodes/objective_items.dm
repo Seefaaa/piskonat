@@ -105,6 +105,7 @@
 		JOB_QUARTERMASTER,
 		JOB_RESEARCH_DIRECTOR,
 		JOB_STATION_ENGINEER,
+		JOB_WORKER, // PSYCHONAUT EDIT ADDITION - WORKER
 	)
 	exists_on_map = TRUE
 	difficulty = 3
@@ -548,7 +549,10 @@
 /datum/objective_item/steal/blackbox
 	name = "the Blackbox"
 	targetitem = /obj/item/blackbox
-	excludefromjob = list(JOB_CHIEF_ENGINEER, JOB_STATION_ENGINEER, JOB_ATMOSPHERIC_TECHNICIAN)
+	// PSYCHONAUT EDIT CHANGE START - WORKER - ORIGINAL:
+	// excludefromjob = list(JOB_CHIEF_ENGINEER, JOB_STATION_ENGINEER, JOB_ATMOSPHERIC_TECHNICIAN)
+	excludefromjob = list(JOB_CHIEF_ENGINEER, JOB_STATION_ENGINEER, JOB_ATMOSPHERIC_TECHNICIAN, JOB_WORKER)
+	// PSYCHONAUT EDIT CHANGE END
 	exists_on_map = TRUE
 	difficulty = 4
 	steal_hint = "The station's data Blackbox, found solely within Telecommunications."
@@ -562,8 +566,12 @@
 /datum/objective_item/steal/traitor/insuls
 	name = "insulated gloves"
 	targetitem = /obj/item/clothing/gloves/color/yellow
-	excludefromjob = list(JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER, JOB_ATMOSPHERIC_TECHNICIAN, JOB_STATION_ENGINEER, JOB_CHIEF_ENGINEER)
-	item_owner = list(JOB_STATION_ENGINEER, JOB_CHIEF_ENGINEER)
+	// PSYCHONAUT EDIT CHANGE START - WORKER - ORIGINAL:
+	// excludefromjob = list(JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER, JOB_ATMOSPHERIC_TECHNICIAN, JOB_STATION_ENGINEER, JOB_CHIEF_ENGINEER)
+	// item_owner = list(JOB_STATION_ENGINEER, JOB_CHIEF_ENGINEER)
+	excludefromjob = list(JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER, JOB_ATMOSPHERIC_TECHNICIAN, JOB_STATION_ENGINEER, JOB_WORKER, JOB_CHIEF_ENGINEER)
+	item_owner = list(JOB_STATION_ENGINEER, JOB_WORKER, JOB_CHIEF_ENGINEER)
+	// PSYCHONAUT EDIT CHANGE END
 	exists_on_map = TRUE
 	difficulty = 1
 	steal_hint = "A basic pair of insulated gloves, usually worn by Assistants, Engineers, or Cargo Technicians."

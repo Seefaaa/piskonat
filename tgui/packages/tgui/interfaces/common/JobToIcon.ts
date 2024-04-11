@@ -57,4 +57,5 @@ export const JOB2ICON = {
   Virologist: 'virus',
   Warden: 'handcuffs',
   'Nt Secretary': 'clipboard-check', // PSYCHONAUT EDIT ADDITION - NT_SECRETARY
+  'Worker': 'screwdriver-wrench', // PSYCHONAUT EDIT ADDITION - WORKER
 } as const;
