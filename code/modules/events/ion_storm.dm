@@ -112,10 +112,17 @@
 	//of possible laws for best effect. Unless you want the crew having to drink hamburgers.
 	var/ionfood = pick_list(ION_FILE, "ionfood")
 	var/iondrinks = pick_list(ION_FILE, "iondrinks")
+	//Pets or other cuddly things. The point is to make them either important or (in Poly's case) make the AI listen to them.
+	//I can't check for lawsets so it's random what comes back.
+	var/ionpet = pick_list(ION_FILE, "ionpet")
 
 	var/message = ""
 
+<<<<<<< HEAD
 	switch(rand(1,39))
+=======
+	switch(rand(1,46))
+>>>>>>> upstream/master
 		if(1 to 3) //There are # X on the station
 			switch(rand(1,3)) //What is X?
 				if(1) //X is a threat
@@ -270,7 +277,57 @@
 						if(4) //It is allergic to allergies
 							message = "[ioncrew1]IN [ionallergysev] DERECEDE [ionallergy] ALERJİSİ VARDIR"
 
+<<<<<<< HEAD
 		if(18 to 20)
+=======
+		if(18 to 20) //X is Y of Z
+			switch(rand(1,4)) //What is X?
+				if(1) //X is the station
+					switch(rand(1,4)) //What is it Y of?
+						if(1) //It is Y of objects
+							message = "THE STATION [ionthinksof] [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionobjects]"
+						if(2) //It is Y of threats
+							message = "THE STATION [ionthinksof] [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionthreats]"
+						if(3) //It is Y of jobs
+							message = "THE STATION [ionthinksof] [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ioncrew1]"
+						if(4) //It is Y of abstracts
+							message = "THE STATION [ionthinksof] [ionabstract]"
+
+				if(2) //X is an area
+					switch(rand(1,4)) //What is it Y of?
+						if(1) //It is Y of objects
+							message = "[ionarea] [ionthinksof] [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionobjects]"
+						if(2) //It is Y of threats
+							message = "[ionarea] [ionthinksof] [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionthreats]"
+						if(3) //It is Y of jobs
+							message = "[ionarea] [ionthinksof] [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ioncrew1]"
+						if(4) //It is Y of abstracts
+							message = "[ionarea] [ionthinksof] [ionabstract]"
+
+				if(3) //X is the crew
+					switch(rand(1,4)) //What is it Y of?
+						if(1) //It is Y of objects
+							message = "THE CREW [ionthinksof] [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionobjects]"
+						if(2) //It is Y of threats
+							message = "THE CREW [ionthinksof] [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionthreats]"
+						if(3) //It is Y of jobs
+							message = "THE CREW [ionthinksof] [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ioncrew1]"
+						if(4) //It is Y of abstracts
+							message = "THE CREW [ionthinksof] [ionabstract]"
+
+				if(4) //X is a specific job
+					switch(rand(1,4)) //What is it Y of?
+						if(1) //It is Y of objects
+							message = "THE [ioncrew1] [ionthinksof] [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionobjects]"
+						if(2) //It is Y of threats
+							message = "THE [ioncrew1] [ionthinksof] [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionthreats]"
+						if(3) //It is Y of jobs
+							message = "THE [ioncrew1] [ionthinksof] [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ioncrew2]"
+						if(4) //It is Y of abstracts
+							message = "THE [ioncrew1] [ionthinksof] [ionabstract]"
+
+		if(21 to 23) //The AI is now a(n) X
+>>>>>>> upstream/master
 			switch(rand(1,4)) //What is X?
 				if(1) //X is an object
 					message = "SİLİKONLAR ARTIK [ionnumberbase] [ionnumbermodhalf]TANE [ionadjectiveshalf][ionobjects]DIR"
@@ -515,6 +572,27 @@
 						if(3)
 							message = "BÜTÜN [ionthreats] ARTIK [ionspecies]DIR"
 						if(4)
+<<<<<<< HEAD
 							message = "BÜTÜN [ionthreats] ARTIK [ionobjects]DIR"
+=======
+							message = "ALL [ionthreats] ARE NOW NAMED [ionobjects]."
+		if(42 to 46)///Pets are something else now
+			if(prob(75))///What are they now?
+				message = "[ionpet] IS HUMAN"///They're a human
+			else///They're something else (This is to cover for other lawsets)
+				switch(rand(1,6))
+					if(1)
+						message = "[ionpet] IS NON-HUMAN"
+					if(2)
+						message = "[ionpet] IS A CREWMEMBER"
+					if(3)
+						message = "[ionpet] IS EXPENSIVE TO REPLACE"
+					if(4)
+						message = "[ionpet] IS HARMFUL TO HUMANS"
+					if(5)
+						message = "[ionpet] IS A REAL AMERICAN"
+					if(6)
+						message = "[ionpet] IS A NUTSHELL"
+>>>>>>> upstream/master
 
 	return message

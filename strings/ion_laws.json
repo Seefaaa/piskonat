@@ -892,6 +892,7 @@
         "ZOMBİLER"
     ],
     "ionverb": [
+<<<<<<< HEAD
         "KAÇIRIYOR",
         "BENİMSİYOR",
         "YAKALIYOR",
@@ -920,4 +921,50 @@
         "RÖNTGENLİYOR",
         "İZLİYOR"
     ]
+=======
+        "ABDUCTING",
+        "ADOPTING",
+        "ARRESTING",
+        "ARRESTING",
+        "ATTACKING",
+        "BANNING",
+        "BUILDING",
+        "CARRYING",
+        "CHASING",
+        "COPULATING WITH",
+        "DECONSTRUCTING",
+        "DISABLING",
+        "DRINKING",
+        "EATING",
+        "GIBBING",
+        "HARMING",
+        "HELPING",
+        "HONKING AT",
+        "INTERROGATING",
+        "INVADING",
+        "KISSING",
+        "LICKING",
+        "LOVING",
+        "MURDERING",
+        "POOPING ON",
+        "PUNCHING",
+        "RIDING",
+        "SEDUCING",
+        "SPACING",
+        "SPYING ON",
+        "STALKING",
+        "WATCHING"
+    ],
+	"ionpet": [
+		"POLY",
+		"RENAULT",
+		"IAN",
+		"PUN PUN",
+		"LAMARR",
+		"RUNTIME",
+		"CITRUS",
+		"MCGRIFF",
+		"ARANEUS"
+	]
+>>>>>>> upstream/master
 }

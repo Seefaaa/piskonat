@@ -83,7 +83,11 @@
 /datum/job/human_ai/announce_job(mob/living/joining_mob)
 	. = ..()
 	if(SSticker.HasRoundStarted())
+<<<<<<< HEAD
 		minor_announce("Bir aksilik nedeniyle, [joining_mob] [AREACOORD(joining_mob)] bölgesinde yedek AI olarak görevlendirildi. Lütfen saygılı davranın.")
+=======
+		minor_announce("Due to a research mishap, [joining_mob] has been sent to be your replacement AI at [AREACOORD(joining_mob)]. Please treat them with respect.")
+>>>>>>> upstream/master
 
 /datum/job/human_ai/get_radio_information()
 	return "<b>Prefix your message with :b to speak with cyborgs.</b>"
