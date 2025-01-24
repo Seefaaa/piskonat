@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Box, Button, Section, Stack, TextArea } from 'tgui-core/components';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../../backend';
 import { PreferencesMenuData } from './data';
 import { ServerPreferencesFetcher } from './ServerPreferencesFetcher';
 
